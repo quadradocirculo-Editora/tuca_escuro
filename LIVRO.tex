@@ -121,6 +121,13 @@ ItalicFont = Formular-Light.otf]
 \fancyfoot[CE,CO]{\Formular \footnotesize \textit \thepage}
 \renewcommand{\headrulewidth}{0pt}
 
+%---------------------------------------ALTERAR FONTE DA NUMERAÇÃO DE PÁGINA DE CHAPTER
+
+\fancypagestyle{chapter}{
+\fancyhf{}
+\fancyfoot[CE,CO]{\Formular \footnotesize \textit \thepage}
+\renewcommand{\headrulewidth}{0pt}}
+
 %--------------------------------------------ALTERAR DISTÃNCIA ENTRE TÍTULO DO SUMÁRIO E CAPÍTULOS
 %\addtocontents{toc}{\vskip-15pt}
 %--------------------------------------------

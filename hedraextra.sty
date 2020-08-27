@@ -123,11 +123,11 @@
 
 % bibliohedra 
 \RequirePackage{ifthen}
-\newcommand{\tit}[1]{\item[\MakeTextLowercase{\textsc{#1}}]}
+\newcommand{\tit}[1]{\item[\tiny\MakeTextUppercase{\textsc{#1}}]}
 \newcommand{\titidem}{\item[\line(1,0){25}]}
 
-\newenvironment{bibliohedra}[1][livros]{%
-    \frenchspacing\footnotesize
+\newenvironment{bibliohedra}[1][]{%
+    \frenchspacing\Formular\scriptsize
 	\ifthenelse{\equal{#1}{}}%
         {\relax}{\section*{\MakeTextLowercase{#1}}\vspace{2ex}}
 		\begin{list}{}{

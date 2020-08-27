@@ -4,18 +4,19 @@
 \newcommand{\tipopadrao}{Formular}
 \newcommand{\DistanciaImagemFront}{\vspace*{.3\textwidth}}
 \newcommand{\LarguraFront}{\textwidth}
-\newcommand{\TamanhoTitulo}{\Huge}
+\newcommand{\TamanhoTitulo}{\LARGE}
 \newcommand{\titulagemfront}{\IfFileExists{front.png}{\DistanciaImagemFront\includegraphics[width=\LarguraFront]{front.png}}%
   {\begingroup\vspace*{-8mm}%\vspace{.001\textheight} 
                       \TamanhoTitulo \baselineskip=.67\baselineskip 
-                        \textbf{\titulo}%\MakeTextLowercase{\textsc{\titulo}} 
-                       \par
+                        \flushleft\textbf{\titulo}%\MakeTextLowercase{\textsc{\titulo}} 
+                       \par\vspace{.5cm}
                    \ifdef{\subtit}{\smaller[3] \textit{\subtit}\par\medskip}{}\endgroup}}
 
 \newcommand{\titulagem}{{\vspace*{-8mm}%\vspace*{.001\textheight} 
                       \TamanhoTitulo \baselineskip=.67\baselineskip 
-                        \textbf{\titulo}%\MakeTextLowercase{\textsc{\titulo}} 
+                        \flushleft\textbf{\titulo}%\MakeTextLowercase{\textsc{\titulo}} 
                        \par
+                       {\LARGE{\autor} \par}\vspace{.5cm}
                    \ifdef{\subtit}{\smaller[3] \textit{\subtit}\par\medskip}{}}}
 
 \newcommand{\sumario}{\begingroup\mbox{}\pagestyle{empty}\pagebreak\ifodd\thepage\paginabranca\fi
@@ -27,8 +28,8 @@
 					%\vspace{15mm}					
 					%{\LARGE{\autor}}
 					%\vspace{6cm}
-                    \def\contentsname{{\Formular{Sumário}}}
-                    \tableofcontents*\clearpage\endgroup}
+                    \def\contentsname{{\Formular\textbf{Sumário}}}
+                    \Formular\tableofcontents*\clearpage\endgroup}
 \newcommand{\publicidade}{\pagebreak\pagestyle{empty}\parindent0pt
 \include{PUBLICIDADE}}
 

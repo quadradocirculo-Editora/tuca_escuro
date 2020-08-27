@@ -1,4 +1,4 @@
-\documentclass[semcabeco,showtrims,trimframe,12pt,conselho,spreadimages]{memoir}
+\documentclass[semcabeco,showtrims,12pt,conselho,spreadimages]{memoir}
 
 \usepackage[11x18]{hedraoptions} %% << %%%%%%%%%%%%%%%%
 \usepackage[baruch]{hedrastyles}
@@ -25,6 +25,10 @@
 \usepackage[justification=centering]{caption}
 %\counterwithin*{endnote}{part}
 %\counterwithin*{endnote}{chapter}
+
+%\usepackage{tocloft}
+%\renewcommand{\cftchapfont}{\scshape}
+
 
 \let\latexchapter\chapter
 \makeatletter
@@ -77,6 +81,17 @@
 
 \usepackage{anyfontsize}
 
+%---------------------------------------MUDAR FONTE DE CHAPTER
+\usepackage{titlesec}
+\titleformat{\chapter}
+[display]
+{\Large\bfseries\Formular}
+ {\large\chaptertitlename\space\thechapter}
+  {20pt}
+  {\flushleft}
+
+  \titlespacing*{\chapter}{0pt}{-.2cm}{3cm}
+
 %--------------------------------------------TIRAR TRAÇO DIVISOR DA FOOTNOTE
 
 \usepackage{footmisc}
@@ -93,7 +108,12 @@
 
 %\setmainfont[Ligatures=TeX]{FS Brabo Pro-Regular}
 
-\newcommand{\slsc}[1]{\fontspec[SmallCapsFeatures={FakeSlant=0.6}]{Formular-LightItalic}\textsc{#1}\fontspec[]{FormularLight-Italic}}
+\newcommand{\slsc}[1]{\fontspec[SmallCapsFeatures={FakeSlant=0.6}]{Formular-LightItalic}\textsc{#1}\fontspec[]{Formular-LightItalic}}
+
+\newcommand{\bold}[1]{\fontspec[SmallCapsFeatures={FakeSlant=0.6}]{Formular-BoldItalic}\textsc{#1}\fontspec[]{Formular-BoldItalic}}
+
+\newcommand{\italic}[1]{\fontspec[SmallCapsFeatures={FakeSlant=0.6}]{Formular-Italic}\textsc{#1}\fontspec[]{Formular-Italic}}
+
 
 %\usepackage{Formular}
 \newfontfamily\Formular{Formular-Regular}[
@@ -239,6 +259,8 @@ ItalicFont = Formular-Light.otf]
 %\newcommand\Chapter[2]{\chapter
 %  [#1\hfil\hbox{}\protect\linebreak{\itshape#1}]%
 %  {#1\\[2ex]\Large\itshape#2}%
+
+
 %}
 
 \begin{document}

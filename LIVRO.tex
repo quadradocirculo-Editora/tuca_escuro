@@ -1,6 +1,6 @@
-\documentclass[semcabeco,showtrims,12pt,conselho,spreadimages]{memoir}
+\documentclass[comcabeco,showtrims,trimframe,12pt,conselho,spreadimages]{memoir}
 
-\usepackage[11x18]{hedraoptions} %% << %%%%%%%%%%%%%%%%
+\usepackage[largepost]{hedraoptions} %% << %%%%%%%%%%%%%%%%
 \usepackage[baruch]{hedrastyles}
 \usepackage[xetex,chicagofootnotes]{tipografia}
 \usepackage[standart]{toc}
@@ -25,6 +25,10 @@
 \usepackage[justification=centering]{caption}
 %\counterwithin*{endnote}{part}
 %\counterwithin*{endnote}{chapter}
+
+\makeatletter
+\setlength{\@fptop}{0pt}
+\makeatother
 
 %\usepackage{tocloft}
 %\renewcommand{\cftchapfont}{\scshape}
@@ -85,7 +89,7 @@
 \usepackage{titlesec}
 \titleformat{\chapter}
 [display]
-{\Large\bfseries\Formular}
+{\Large\Formular}
  {\large\chaptertitlename\space\thechapter}
   {20pt}
   {\flushleft}
@@ -134,13 +138,17 @@ ItalicFont = Formular-Light.otf]
 \makeatother
 
 %--------------------------------------------ALTERAR FONTE DA NUMERAÇÃO DE PÁGINA
+
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
+\fancyhead[CE]{\tiny\Formular{SALTO NO ESCURO}}
+\fancyhead[CO]{\tiny\Formular{\leftmark}}
 \fancyfoot[CE,CO]{\Formular \footnotesize \textit \thepage}
 \renewcommand{\headrulewidth}{0pt}
 
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 %---------------------------------------ALTERAR FONTE DA NUMERAÇÃO DE PÁGINA DE CHAPTER
 
 \fancypagestyle{chapter}{
@@ -259,7 +267,6 @@ ItalicFont = Formular-Light.otf]
 %\newcommand\Chapter[2]{\chapter
 %  [#1\hfil\hbox{}\protect\linebreak{\itshape#1}]%
 %  {#1\\[2ex]\Large\itshape#2}%
-
 
 %}
 

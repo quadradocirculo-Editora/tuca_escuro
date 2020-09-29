@@ -3,8 +3,8 @@
 
 \def\thepage{Front cover}
 \begin{textblock*}{5.625in}(0pt,0pt)%
-\vspace*{-1.4cm}
-\hspace*{-1.6cm}\includegraphics*[width=112mm]{./imgs/front.pdf}
+\vspace*{-1.9cm}
+\hspace*{-1.5cm}\includegraphics*[width=132mm]{./imgs/lettering.pdf}
 \end{textblock*}
 
 \clearpage
@@ -20,8 +20,8 @@
 
 %\bigskip
 \begingroup\tiny
-\pagecolor{black}\afterpage{\nopagecolor}
-\color{white}
+%\pagecolor{black}\afterpage{\nopagecolor}
+%\color{white}
 {\Formular{
 \linha{copyright}{\copyrightlivro}
 \linhalayout{edição brasileira©}{Quadradocirculo \ifdef{\ano}{\ano}{\the\year}}
@@ -69,13 +69,14 @@ R.~Fradique Coutinho, 1.139\\
 % Titulo
 
 %{\Formular{\Huge{\titulagem}}}
-\vspace*{-1.4cm}
-\hspace*{-1.6cm}\includegraphics*[width=112mm]{./imgs/lettering.pdf}
+\vspace*{-1.9cm}
+\hspace*{-1.5cm}\includegraphics*[width=132mm]{./imgs/lettering.pdf}
 \vspace{11.25mm}
 
 \vspace*{-1.5cm}
-\hspace*{-.55cm}{\Formular{\large{Leituras do espaço\vspace{-.12cm}\\\hspace*{-.67cm} contemporâneo}}}
-
+\begin{flushleft}
+{\Formular\large{Leituras do espaço\\ contemporâneo}}
+\end{flushleft}
 %{\LARGE{\autor} \par}%\vspace{1.5ex}}
 %\vspace{2cm} %9.3cm
 \ifdef{\organizador}{{\small {\organizador} (\textit{organização})} \par}{}
